@@ -33,6 +33,8 @@ python ./src/scan.py --image {imagePath} --gui 1
 
 To save, press the '-' key on the keyboard this will create a new folder called data and timestamp the save.
 
+To quit, press the 'q' key on the keyboard.
+
 # Methodology
 
 Images are taken using a microscope. cropped images work best for this.
