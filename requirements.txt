@@ -1,0 +1,7 @@
+opencv-python
+numpy
+keyboard
+matplotlib
+pandas
+Pyarrow
+argparse

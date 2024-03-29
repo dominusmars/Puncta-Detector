@@ -1,0 +1,6 @@
+samples
+.venv
+.vscode
+*.tif
+*.czi
+data
