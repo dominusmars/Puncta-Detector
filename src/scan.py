@@ -3,7 +3,6 @@
 from ast import arg
 import csv
 import cv2
-import sys
 import os
 import time
 import json

@@ -31,6 +31,8 @@ Interactive mode lets you adjust parameters as seen fit. It gives you a bunch of
 python ./src/scan.py --image {imagePath} --gui 1
 ```
 
+To save, press the '-' key on the keyboard this will create a new folder called data and timestamp the save.
+
 # Methodology
 
 Images are taken using a microscope. cropped images work best for this.
