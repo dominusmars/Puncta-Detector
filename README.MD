@@ -31,19 +31,15 @@ Interactive mode lets you adjust parameters as seen fit. It gives you a bunch of
 python ./src/scan.py --image {imagePath} --gui 1
 ```
 
-```sh
-python ./src/scan.py --image {imagePath} --gui 1
-```
-
 # Methodology
 
-    Images are taken using a microscope. cropped images work best for this.
+Images are taken using a microscope. cropped images work best for this.
 
-    Images are then gray scaled to extract brightness values.
+Images are then gray scaled to extract brightness values.
 
-    After gray scaling, Images are then normalized so that the brightest part of the image is 255 and darkest being 0.
-    This provides fine tuning of the brightness levels. To adjust as needed.
+After gray scaling, Images are then normalized so that the brightest part of the image is 255 and darkest being 0.
+This provides fine tuning of the brightness levels. To adjust as needed.
 
-    A Mask is created to identify Puncta based on the brightness threshold. Brightness threshold is based on the modified image not the original image.
+A Mask is created to identify Puncta based on the brightness threshold. Brightness threshold is based on the modified image not the original image.
 
-    Mask is then overlaid with the original image to find the true values of the puncta.
+Mask is then overlaid with the original image to find the true values of the puncta.
