@@ -516,41 +516,44 @@ if blur is None:
     blur = 1
 
 
-# Display the original image
-# cv2.imshow('Original Image', image)
 
-# process Image
-preProcessImage()
-processImage()
-if args.gui:
-    
-# Create a window to display the labeled image
-    cv2.namedWindow('Options')
-    cv2.namedWindow('MaskColor Setting')
-    cv2.resizeWindow("Options", 900, 250)
-    cv2.resizeWindow("MaskColor Setting", 900, 200)
-    
-    # Create a trackbar to adjust the brightness threshold
-    cv2.createTrackbar('Brightness', 'Options', brightness_threshold, 255, on_brightness)
-    cv2.createTrackbar('Tolerance', 'Options', tolerance, 255, on_tolerance)
-    cv2.createTrackbar('Surrounding', 'Options', surrounding, 10, on_surrounding)
-    
-    cv2.createTrackbar('Mask Blue', 'MaskColor Setting', blue, 255, onColorChangeBlue)
-    cv2.createTrackbar('Mask Green', 'MaskColor Setting', green, 255, onColorChangeGreen)
-    cv2.createTrackbar('Mask Red', 'MaskColor Setting', red, 255, onColorChangeRed)
-    cv2.createTrackbar('Blur', 'Options', blur, 10, onBlurChange)
-    keyboard.on_press_key("-", lambda _:saveData())
-    ready = True
-    while True:
-        # Wait for a key event
-        key = cv2.waitKey(0)
-        # If 'q' is pressed or data saving is complete, break the loop
-        if key == ord('q'):
-            break
-    cv2.destroyAllWindows()
+if __name__ == '__main__':
 
-else:
-    print("Saved")
+    # Display the original image
+    # cv2.imshow('Original Image', image)
+
+    # process Image
+    preProcessImage()
+    processImage()
+    if args.gui:
+        
+    # Create a window to display the labeled image
+        cv2.namedWindow('Options')
+        cv2.namedWindow('MaskColor Setting')
+        cv2.resizeWindow("Options", 900, 250)
+        cv2.resizeWindow("MaskColor Setting", 900, 200)
+        
+        # Create a trackbar to adjust the brightness threshold
+        cv2.createTrackbar('Brightness', 'Options', brightness_threshold, 255, on_brightness)
+        cv2.createTrackbar('Tolerance', 'Options', tolerance, 255, on_tolerance)
+        cv2.createTrackbar('Surrounding', 'Options', surrounding, 10, on_surrounding)
+        
+        cv2.createTrackbar('Mask Blue', 'MaskColor Setting', blue, 255, onColorChangeBlue)
+        cv2.createTrackbar('Mask Green', 'MaskColor Setting', green, 255, onColorChangeGreen)
+        cv2.createTrackbar('Mask Red', 'MaskColor Setting', red, 255, onColorChangeRed)
+        cv2.createTrackbar('Blur', 'Options', blur, 10, onBlurChange)
+        keyboard.on_press_key("-", lambda _:saveData())
+        ready = True
+        while True:
+            # Wait for a key event
+            key = cv2.waitKey(0)
+            # If 'q' is pressed or data saving is complete, break the loop
+            if key == ord('q'):
+                break
+        cv2.destroyAllWindows()
+
+    else:
+        print("Saved")
 
 
     
